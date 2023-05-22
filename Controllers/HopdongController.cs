@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QLNS.Models;
-
+using QLNS.Models.Process;
 namespace QLNS.Controllers
 {
     public class HopdongController : Controller
@@ -159,4 +159,4 @@ namespace QLNS.Controllers
           return (_context.Hopdong?.Any(e => e.MaNV == id)).GetValueOrDefault();
         }
     }
-}
+ }  

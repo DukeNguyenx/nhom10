@@ -6,12 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QLNS.Models;
+using QLNS.Models.Process;
 
 namespace QLNS.Controllers
 {
+   
     public class NhansuController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private StringProcess strPro = new StringProcess();
 
         public NhansuController(ApplicationDbContext context)
         {
@@ -48,6 +51,15 @@ namespace QLNS.Controllers
         public IActionResult Create()
         {
             ViewData["MaPhong"] = new SelectList(_context.Set<Phongban>(), "MaPhong", "TenPhong");
+            var newnhacungcap = "NS01";
+            var countnhacungcap = _context.Nhansu.Count();
+            if (countnhacungcap > 0)
+            {
+                var Manv = _context.Nhansu.OrderByDescending(m => m.MaNV).First().MaNV;
+                newnhacungcap = strPro.AutoGenerateCode(Manv);
+            }
+            ViewBag.newID = newnhacungcap;
+
             return View();
         }
 
@@ -164,4 +176,4 @@ namespace QLNS.Controllers
           return (_context.Nhansu?.Any(e => e.MaNV == id)).GetValueOrDefault();
         }
     }
-}
+    }

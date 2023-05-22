@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PbxX96j111vjx5Ju0zXf636sNKFaMV6SZROSUpiiW98XPFrlQWRIZr2UcVLupc1KQtnpnXdXJLHA38gSAFx5wg==",
+  "dgSpecHash": "zp+l700Jnvpi+SYBPxiV2oGYthCbojJouKMuDrh8xdBt2UpyCx7j9fJksoX9o2UKGO4GouRY4xB1zbnDN7aAqQ==",
   "success": true,
-  "projectFilePath": "D:\\PT phan mem quan ly\\BTL\\QLNS\\QLNS.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\nhom10\\nhom10\\QLNS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\epplus\\6.2.4\\epplus.6.2.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
