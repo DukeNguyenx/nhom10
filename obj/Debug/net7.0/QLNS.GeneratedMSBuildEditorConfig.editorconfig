@@ -9,101 +9,101 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QLNS
 build_property.RootNamespace = QLNS
-build_property.ProjectDir = C:\Users\Admin\Desktop\nhom10\nhom10\
+build_property.ProjectDir = c:\Users\Admin\OneDrive\Máy tính\nhom10\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\nhom10\nhom10
+build_property.MSBuildProjectDirectory = c:\Users\Admin\OneDrive\Máy tính\nhom10
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Home/Index.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Home/Privacy.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Hopdong/Create.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Hopdong/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9wZG9uZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Hopdong/Delete.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Hopdong/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9wZG9uZ1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Hopdong/Details.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Hopdong/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9wZG9uZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Hopdong/Edit.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Hopdong/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9wZG9uZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Hopdong/Index.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Hopdong/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9wZG9uZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Nhansu/Create.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Nhansu/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhbnN1XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Nhansu/Delete.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Nhansu/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhbnN1XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Nhansu/Details.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Nhansu/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhbnN1XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Nhansu/Edit.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Nhansu/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhbnN1XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Nhansu/Index.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Nhansu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhbnN1XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Phongban/Create.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Phongban/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdiYW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Phongban/Delete.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Phongban/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdiYW5cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Phongban/Details.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Phongban/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdiYW5cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Phongban/Edit.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Phongban/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdiYW5cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Phongban/Index.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Phongban/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdiYW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Phongban/Upload.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Phongban/Upload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdiYW5cVXBsb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Shared/Error.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/_ViewImports.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/_ViewStart.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/nhom10/nhom10/Views/Shared/_Layout.cshtml]
+[c:/Users/Admin/OneDrive/Máy tính/nhom10/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rvcotgry9g
