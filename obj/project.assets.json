@@ -10503,11 +10503,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\nhom10\\nhom10\\QLNS.csproj",
+      "projectUniqueName": "D:\\PT phan mem quan ly\\BTL\\QLNS\\QLNS.csproj",
       "projectName": "QLNS",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\nhom10\\nhom10\\QLNS.csproj",
+      "projectPath": "D:\\PT phan mem quan ly\\BTL\\QLNS\\QLNS.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\nhom10\\nhom10\\obj\\",
+      "outputPath": "D:\\PT phan mem quan ly\\BTL\\QLNS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -10578,7 +10578,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
       }
     }
   }

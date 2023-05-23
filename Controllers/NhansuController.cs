@@ -51,14 +51,14 @@ namespace QLNS.Controllers
         public IActionResult Create()
         {
             ViewData["MaPhong"] = new SelectList(_context.Set<Phongban>(), "MaPhong", "TenPhong");
-            var newnhacungcap = "NS01";
-            var countnhacungcap = _context.Nhansu.Count();
-            if (countnhacungcap > 0)
+            var nhansumoi = "NV01";
+            var countnhansumoi = _context.Nhansu.Count();
+            if (countnhansumoi > 0)
             {
                 var Manv = _context.Nhansu.OrderByDescending(m => m.MaNV).First().MaNV;
-                newnhacungcap = strPro.AutoGenerateCode(Manv);
+                nhansumoi = strPro.AutoGenerateCode(Manv);
             }
-            ViewBag.newID = newnhacungcap;
+            ViewBag.newID = nhansumoi;
 
             return View();
         }
