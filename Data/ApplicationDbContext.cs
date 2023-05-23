@@ -17,4 +17,6 @@ using QLNS.Models;
         public DbSet<QLNS.Models.Phongban> Phongban { get; set; } = default!;
 
         public DbSet<QLNS.Models.Hopdong> Hopdong { get; set; } = default!;
+
+        public DbSet<QLNS.Models.ChucVu> ChucVu { get; set; } = default!;
     }

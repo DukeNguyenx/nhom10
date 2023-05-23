@@ -18655,6 +18655,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\PT phan mem quan ly\\BTL\\QLNS\\Views\\ChucVu\\Edit.cshtml",
+      "TargetPath": "Views\\ChucVu\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\PT phan mem quan ly\\BTL\\QLNS\\Views\\Hopdong\\Details.cshtml",
       "TargetPath": "Views\\Hopdong\\Details.cshtml",
       "FileKind": "mvc"
@@ -18740,8 +18745,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\PT phan mem quan ly\\BTL\\QLNS\\Views\\ChucVu\\Details.cshtml",
+      "TargetPath": "Views\\ChucVu\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\PT phan mem quan ly\\BTL\\QLNS\\Views\\ChucVu\\Index.cshtml",
+      "TargetPath": "Views\\ChucVu\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\PT phan mem quan ly\\BTL\\QLNS\\Views\\Phongban\\Edit.cshtml",
       "TargetPath": "Views\\Phongban\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\PT phan mem quan ly\\BTL\\QLNS\\Views\\ChucVu\\Delete.cshtml",
+      "TargetPath": "Views\\ChucVu\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\PT phan mem quan ly\\BTL\\QLNS\\Views\\ChucVu\\Create.cshtml",
+      "TargetPath": "Views\\ChucVu\\Create.cshtml",
       "FileKind": "mvc"
     },
     {

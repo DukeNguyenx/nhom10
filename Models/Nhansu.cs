@@ -20,6 +20,9 @@ namespace QLNS.Models
         [Required(ErrorMessage ="Chức vụ không được bỏ trống")]
          [Display(Name ="Chức vụ")]
         public string Chucvu  {get; set;}
+        [ForeignKey("MaChucvu")]
+        [Display(Name ="Mã Chức vụ")]
+        public ChucVu? TenChucvu {get; set;} 
         public string MaPhong  {get; set;}
         [ForeignKey("MaPhong")]
         [Display(Name ="Mã Phòng")]
