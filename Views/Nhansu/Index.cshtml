@@ -7,7 +7,7 @@
 <h1>Thông tin nhân sự</h1>
 
 <p>
-    <a asp-action="Create">Tạo nhân sự mới</a><br>
+    <a asp-action="Create">Tạo nhân sự mới</a>
 </p>
 <table class="table">
     <thead>
@@ -25,7 +25,7 @@
                 @Html.DisplayNameFor(model => model.Gioitinh)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Chucvu)
+                @Html.DisplayNameFor(model => model.TenChucvu)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TenPhong)
@@ -49,10 +49,10 @@
                 @Html.DisplayFor(modelItem => item.Gioitinh)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Chucvu)
+                @Html.DisplayFor(modelItem => item.TenChucvu.TenChucvu)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TenPhong.MaPhong)
+                @Html.DisplayFor(modelItem => item.TenPhong.TenPhong)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MaNV">Edit</a> |

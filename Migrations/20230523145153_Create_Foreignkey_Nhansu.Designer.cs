@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace QLNS.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230523125736_Create_Table_ChucVu")]
-    partial class Create_Table_ChucVu
+    [Migration("20230523145153_Create_Foreignkey_Nhansu")]
+    partial class Create_Foreignkey_Nhansu
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,7 +54,7 @@ namespace QLNS.Migrations
                     b.Property<string>("MaNV")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Chucvu")
+                    b.Property<string>("ChucVu")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

@@ -17,15 +17,13 @@ namespace QLNS.Models
         public string NgaySinh {get; set;}
          [Display(Name ="Giới tính")]
         public string Gioitinh {get; set;}
-        [Required(ErrorMessage ="Chức vụ không được bỏ trống")]
-         [Display(Name ="Chức vụ")]
-        public string Chucvu  {get; set;}
+        public string MaChucVu  {get; set;}
         [ForeignKey("MaChucvu")]
-        [Display(Name ="Mã Chức vụ")]
+        [Display(Name ="Chức vụ")]
         public ChucVu? TenChucvu {get; set;} 
         public string MaPhong  {get; set;}
         [ForeignKey("MaPhong")]
-        [Display(Name ="Mã Phòng")]
+        [Display(Name ="Phòng")]
         public Phongban? TenPhong {get; set;} 
         [Required(ErrorMessage ="Số điện thoại không được bỏ trống")]
         [Display(Name ="Số điện thoại")]        

@@ -7,15 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QLNS.Models;
 using QLNS.Models.Process;
-
 namespace QLNS.Controllers
 {
-   
     public class NhansuController : Controller
     {
         private readonly ApplicationDbContext _context;
         private StringProcess strPro = new StringProcess();
-
         public NhansuController(ApplicationDbContext context)
         {
             _context = context;
@@ -24,7 +21,7 @@ namespace QLNS.Controllers
         // GET: Nhansu
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Nhansu.Include(n => n.TenPhong);
+            var applicationDbContext = _context.Nhansu.Include(n => n.TenChucvu).Include(n => n.TenPhong);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -37,6 +34,7 @@ namespace QLNS.Controllers
             }
 
             var nhansu = await _context.Nhansu
+                .Include(n => n.TenChucvu)
                 .Include(n => n.TenPhong)
                 .FirstOrDefaultAsync(m => m.MaNV == id);
             if (nhansu == null)
@@ -50,7 +48,8 @@ namespace QLNS.Controllers
         // GET: Nhansu/Create
         public IActionResult Create()
         {
-            ViewData["MaPhong"] = new SelectList(_context.Set<Phongban>(), "MaPhong", "TenPhong");
+            ViewData["MaChucvu"] = new SelectList(_context.ChucVu, "MaChucvu", "TenChucvu");
+            ViewData["MaPhong"] = new SelectList(_context.Phongban, "MaPhong", "TenPhong");
             var nhansumoi = "NV01";
             var countnhansumoi = _context.Nhansu.Count();
             if (countnhansumoi > 0)
@@ -59,7 +58,6 @@ namespace QLNS.Controllers
                 nhansumoi = strPro.AutoGenerateCode(Manv);
             }
             ViewBag.newID = nhansumoi;
-
             return View();
         }
 
@@ -68,7 +66,7 @@ namespace QLNS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaNV,Hoten,NgaySinh,Gioitinh,Chucvu,MaPhong,SDT,Email")] Nhansu nhansu)
+        public async Task<IActionResult> Create([Bind("MaNV,Hoten,NgaySinh,Gioitinh,MaChucvu,MaPhong,SDT,Email")] Nhansu nhansu)
         {
             if (ModelState.IsValid)
             {
@@ -76,7 +74,8 @@ namespace QLNS.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaPhong"] = new SelectList(_context.Set<Phongban>(), "MaPhong", "TenPhong", nhansu.MaPhong);
+            ViewData["MaChucvu"] = new SelectList(_context.ChucVu, "MaChucvu", "TenChucvu", nhansu.TenChucvu);
+            ViewData["MaPhong"] = new SelectList(_context.Phongban, "MaPhong", "TenPhong", nhansu.TenPhong);
             return View(nhansu);
         }
 
@@ -93,7 +92,8 @@ namespace QLNS.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaPhong"] = new SelectList(_context.Set<Phongban>(), "MaPhong", "TenPhong", nhansu.MaPhong);
+            ViewData["MaChucvu"] = new SelectList(_context.ChucVu, "MaChucvu", "TenChucvu", nhansu.TenChucvu);
+            ViewData["MaPhong"] = new SelectList(_context.Phongban, "MaPhong", "TenPhong", nhansu.TenPhong);
             return View(nhansu);
         }
 
@@ -102,7 +102,7 @@ namespace QLNS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaNV,Hoten,NgaySinh,Gioitinh,Chucvu,MaPhong,SDT,Email")] Nhansu nhansu)
+        public async Task<IActionResult> Edit(string id, [Bind("MaNV,Hoten,NgaySinh,Gioitinh,MaChucvu,MaPhong,SDT,Email")] Nhansu nhansu)
         {
             if (id != nhansu.MaNV)
             {
@@ -129,7 +129,8 @@ namespace QLNS.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaPhong"] = new SelectList(_context.Set<Phongban>(), "MaPhong", "TenPhong", nhansu.MaPhong);
+            ViewData["MaChucvu"] = new SelectList(_context.ChucVu, "MaChucvu", "TenChucvu", nhansu.TenChucvu);
+            ViewData["MaPhong"] = new SelectList(_context.Phongban, "MaPhong", "TenPhong", nhansu.TenPhong);
             return View(nhansu);
         }
 
@@ -142,6 +143,7 @@ namespace QLNS.Controllers
             }
 
             var nhansu = await _context.Nhansu
+                .Include(n => n.TenChucvu)
                 .Include(n => n.TenPhong)
                 .FirstOrDefaultAsync(m => m.MaNV == id);
             if (nhansu == null)
@@ -176,4 +178,4 @@ namespace QLNS.Controllers
           return (_context.Nhansu?.Any(e => e.MaNV == id)).GetValueOrDefault();
         }
     }
-    }
+}

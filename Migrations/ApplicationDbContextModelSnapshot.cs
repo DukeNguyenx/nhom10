@@ -51,10 +51,6 @@ namespace QLNS.Migrations
                     b.Property<string>("MaNV")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Chucvu")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -68,6 +64,7 @@ namespace QLNS.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MaChucvu")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MaPhong")
@@ -108,7 +105,9 @@ namespace QLNS.Migrations
                 {
                     b.HasOne("QLNS.Models.ChucVu", "TenChucvu")
                         .WithMany()
-                        .HasForeignKey("MaChucvu");
+                        .HasForeignKey("MaChucvu")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("QLNS.Models.Phongban", "TenPhong")
                         .WithMany()

@@ -9,14 +9,27 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace QLNS.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230521131035_Create_Foreignkey_Nhansu")]
-    partial class Create_Foreignkey_Nhansu
+    [Migration("20230523150946_Create_Table_Nhansu")]
+    partial class Create_Table_Nhansu
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.5");
+
+            modelBuilder.Entity("QLNS.Models.ChucVu", b =>
+                {
+                    b.Property<string>("MaChucvu")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TenChucvu")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MaChucvu");
+
+                    b.ToTable("ChucVu");
+                });
 
             modelBuilder.Entity("QLNS.Models.Hopdong", b =>
                 {
@@ -41,10 +54,6 @@ namespace QLNS.Migrations
                     b.Property<string>("MaNV")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Chucvu")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -54,6 +63,10 @@ namespace QLNS.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Hoten")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MaChucvu")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -71,6 +84,8 @@ namespace QLNS.Migrations
 
                     b.HasKey("MaNV");
 
+                    b.HasIndex("MaChucvu");
+
                     b.HasIndex("MaPhong");
 
                     b.ToTable("Nhansu");
@@ -82,7 +97,6 @@ namespace QLNS.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TenPhong")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("MaPhong");
@@ -90,24 +104,21 @@ namespace QLNS.Migrations
                     b.ToTable("Phongban");
                 });
 
-            modelBuilder.Entity("QLNS.Models.Hopdong", b =>
+            modelBuilder.Entity("QLNS.Models.Nhansu", b =>
                 {
-                    b.HasOne("QLNS.Models.Nhansu", "Nhansu")
+                    b.HasOne("QLNS.Models.ChucVu", "TenChucvu")
                         .WithMany()
-                        .HasForeignKey("MaNV")
+                        .HasForeignKey("MaChucvu")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Nhansu");
-                });
-
-            modelBuilder.Entity("QLNS.Models.Nhansu", b =>
-                {
                     b.HasOne("QLNS.Models.Phongban", "TenPhong")
                         .WithMany()
                         .HasForeignKey("MaPhong")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("TenChucvu");
 
                     b.Navigation("TenPhong");
                 });
