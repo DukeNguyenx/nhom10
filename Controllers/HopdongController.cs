@@ -12,7 +12,7 @@ namespace QLNS.Controllers
     public class HopdongController : Controller
     {
         private readonly ApplicationDbContext _context;
-
+        private StringProcess strPro = new StringProcess();
         public HopdongController(ApplicationDbContext context)
         {
             _context = context;
@@ -47,6 +47,15 @@ namespace QLNS.Controllers
         // GET: Hopdong/Create
         public IActionResult Create()
         {
+            ViewData["MaNV"] = new SelectList(_context.Set<Hopdong>(), "MaNV", "Ngaybatdau","Ngayketthuc");
+            var hopdongmoi = "HD01";
+            var counthopdongmoi= _context.Hopdong.Count();
+            if (counthopdongmoi > 0)
+            {
+                var MaNV = _context.Hopdong.OrderByDescending(m => m.MaNV).First().MaNV;
+                hopdongmoi = strPro.AutoGenerateCode(MaNV);
+            }
+            ViewBag.newID = hopdongmoi;
             return View();
         }
 
@@ -63,6 +72,7 @@ namespace QLNS.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaNV"] = new SelectList(_context.Set<Hopdong>(),  "MaNV", "Ngaybatdau","Ngayketthuc", hopdong.MaNV);
             return View(hopdong);
         }
 

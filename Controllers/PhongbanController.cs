@@ -13,7 +13,7 @@ namespace QLNS.Controllers
     public class PhongbanController : Controller
     {
         private readonly ApplicationDbContext _context;
-
+        private StringProcess strPro = new StringProcess();
         public PhongbanController(ApplicationDbContext context)
         {
             _context = context;
@@ -48,6 +48,15 @@ namespace QLNS.Controllers
         // GET: Phongban/Create
         public IActionResult Create()
         {
+             ViewData["MaPhong"] = new SelectList(_context.Set<Phongban>(), "MaPhong", "TenPhong");
+            var phongbanmoi = "P01";
+            var countphongbanmoi = _context.Phongban.Count();
+            if (countphongbanmoi > 0)
+            {
+                var MaPhong = _context.Phongban.OrderByDescending(m => m.MaPhong).First().MaPhong;
+                phongbanmoi = strPro.AutoGenerateCode(MaPhong);
+            }
+            ViewBag.newID = phongbanmoi;
             return View();
         }
 
@@ -64,6 +73,7 @@ namespace QLNS.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaPhong"] = new SelectList(_context.Set<Phongban>(), "MaPhong", "TenPhong", phongban.MaPhong);
             return View(phongban);
         }
 

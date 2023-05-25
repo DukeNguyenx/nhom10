@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using QLNS.Models;
-
+using QLNS.Models.Process;
 namespace QLNS.Controllers
 {
     public class ChucVuController : Controller
     {
         private readonly ApplicationDbContext _context;
-
+        private StringProcess strPro = new StringProcess();
         public ChucVuController(ApplicationDbContext context)
         {
             _context = context;
@@ -47,6 +47,15 @@ namespace QLNS.Controllers
         // GET: ChucVu/Create
         public IActionResult Create()
         {
+             ViewData["MaChucvu"] = new SelectList(_context.Set<Phongban>(), "MaChucvu", "TenChucvu");
+            var chucvumoi = "CV01";
+            var countchucvumoi = _context.ChucVu.Count();
+            if (countchucvumoi > 0)
+            {
+                var MaChucvu = _context.ChucVu.OrderByDescending(m => m.MaChucvu).First().MaChucvu;
+                chucvumoi = strPro.AutoGenerateCode(MaChucvu);
+            }
+            ViewBag.newID = chucvumoi;
             return View();
         }
 
@@ -63,6 +72,7 @@ namespace QLNS.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaChucvu"] = new SelectList(_context.Set<ChucVu>(), "MaChucvu", "TenChucvu", chucVu.MaChucvu);
             return View(chucVu);
         }
 
